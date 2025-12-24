@@ -5,7 +5,7 @@
     "category": "Servicios Propios",
     "maintenance": {
       "active": false,
-      "description": "Actualización de seguridad crítica"
+      "description": ""
     }
   },
   {
@@ -14,7 +14,7 @@
     "category": "Servicios Propios",
     "maintenance": {
       "active": false,
-      "description": "Mantenimiento programado para mejoras de rendimiento"
+      "description": ""
     }
   },
   {
@@ -23,7 +23,7 @@
     "category": "Servicios Propios",
     "maintenance": {
       "active": true,
-      "description": ""
+      "description": "Implementación de nuevas funcionalidades"
     }
   },
   {
@@ -32,7 +32,7 @@
     "category": "Servicios Terceros",
     "maintenance": {
       "active": false,
-      "description": "Implementación de nuevas funcionalidades"
+      "description": ""
     }
   }
 ]
