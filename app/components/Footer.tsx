@@ -45,7 +45,7 @@ export default function Footer() {
 
         {/* Derechos */}
         <p className="text-xs text-gray-400 text-center md:text-right">
-          © {new Date().getFullYear()} StatusPro · Todos los derechos reservados
+          © {new Date().getFullYear()} UptimeCore · Todos los derechos reservados
         </p>
       </div>
     </footer>
