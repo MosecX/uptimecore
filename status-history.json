@@ -1,0 +1,912 @@
+[
+  {
+    "timestamp": "2025-12-24T21:52:46.853Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Servicio de Autenticación",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      },
+      {
+        "name": "Servicio de Correos",
+        "status": "down"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:52:03.863Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Servicio de Autenticación",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:51:52.671Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Servicio de Autenticación",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:46:40.735Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:46:35.868Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:35:52.915Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:34:19.373Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:18:57.786Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:18:45.813Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:18:27.918Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:18:26.944Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:18:10.516Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T21:18:07.100Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T19:31:57.445Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T19:30:10.737Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T19:30:03.213Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T19:29:45.210Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T19:29:33.343Z",
+    "services": [
+      {
+        "name": "API Principal",
+        "status": "ok"
+      },
+      {
+        "name": "Base de datos Turso",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 1",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 2",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 3",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 4",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 5",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 6",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 7",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 8",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 9",
+        "status": "down"
+      },
+      {
+        "name": "Firebase FCM 10",
+        "status": "down"
+      },
+      {
+        "name": "Database XYZ",
+        "status": "ok"
+      }
+    ]
+  }
+]

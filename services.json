@@ -1,0 +1,38 @@
+[
+  {
+    "name": "API Principal",
+    "url": "https://jsonplaceholder.typicode.com/posts/1",
+    "category": "Servicios Propios",
+    "maintenance": {
+      "active": false,
+      "description": "Actualización de seguridad crítica"
+    }
+  },
+  {
+    "name": "Servicio de Autenticación",
+    "url": "https://auth.example.com/login",
+    "category": "Servicios Propios",
+    "maintenance": {
+      "active": false,
+      "description": "Mantenimiento programado para mejoras de rendimiento"
+    }
+  },
+  {
+    "name": "Database XYZ",
+    "url": "https://google.com",
+    "category": "Servicios Propios",
+    "maintenance": {
+      "active": true,
+      "description": ""
+    }
+  },
+  {
+    "name": "Servicio de Correos",
+    "url": "https://notify.example.com/api",
+    "category": "Servicios Terceros",
+    "maintenance": {
+      "active": false,
+      "description": "Implementación de nuevas funcionalidades"
+    }
+  }
+]
