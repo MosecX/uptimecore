@@ -35,6 +35,14 @@ Combina diseño emocional, animaciones suaves y glassmorphism para transmitir co
 
 ---
 
+## ⚠️ Limitación en cálculo de uptime en Vercel
+
+> **Importante:** Si alojás UptimeCore en plataformas como **Vercel**, la funcionalidad de cálculo de **porcentaje de uptime** puede dejar de funcionar correctamente.  
+Esto se debe a que Vercel ejecuta las funciones API en entornos **serverless con sistema de archivos de solo lectura**, lo que impide leer o escribir archivos como `status-history.json` desde el backend.  
+Como resultado, el cálculo de uptime puede retornar vacío o incorrecto en producción.
+
+---
+
 ## 🖼️ Captura de pantalla
 
 ![Preview](./public/preview.png)
@@ -65,3 +73,9 @@ npm install
 
 # Corre en modo desarrollo
 npm run dev
+
+# Compila para producción
+npm run build
+
+# Ejecuta en modo producción
+npm run start
