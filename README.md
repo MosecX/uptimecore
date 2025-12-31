@@ -43,6 +43,12 @@ Incluye **formulario de contacto integrado con envío de correos vía Gmail SMTP
 
 ---
 
+![Opti 1](./public/opti1.png)
+
+![Opti 2](./public/opti2.png)
+
+---
+
 ## 🚀 Instalación
 
 ```bash
