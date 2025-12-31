@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import ServiceCard from "../components/ServiceCard";
 import { motion, Variants } from "framer-motion";
 
+// Tipos
 type Maintenance = { active: boolean; description?: string };
 type Service = {
   name: string;
@@ -12,31 +13,32 @@ type Service = {
   uptime?: number;
 };
 
-// Variants para el contenedor (stagger)
+// Variants más ligeros (sin spring)
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
       delayChildren: 0.05,
     },
   },
 };
 
-// Variants para cada ítem
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 10 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
-      stiffness: 120,
-      damping: 20,
+      duration: 0.25,
+      ease: "easeOut",
     },
   },
 };
+
+// Memo para evitar re-renders innecesarios
+const MemoServiceCard = memo(ServiceCard);
 
 export default function StatusPage() {
   const [services, setServices] = useState<Service[]>([]);
@@ -59,7 +61,12 @@ export default function StatusPage() {
       setServices(merged);
       setLoading(false);
     };
+
     fetchData();
+
+    // Auto-refresh cada 60s
+    const interval = setInterval(fetchData, 60000);
+    return () => clearInterval(interval);
   }, []);
 
   const grouped = services.reduce((acc, s) => {
@@ -68,13 +75,14 @@ export default function StatusPage() {
   }, {} as Record<string, Service[]>);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-10 font-sans">
-      <div className="max-w-5xl mx-auto space-y-12">
+    <div className="relative min-h-screen text-gray-100 px-4 sm:px-6 py-8 font-sans overflow-hidden">
+      {/* 🧊 Contenedor glassmorphism optimizado */}
+      <div className="max-w-5xl mx-auto space-y-12 backdrop-blur-sm md:backdrop-blur-xl bg-white/5 rounded-2xl p-6 sm:p-8 shadow-md md:shadow-xl border border-white/10">
         <header className="text-center space-y-4">
-          <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
             Estado del sistema
           </h1>
-          <p className="text-sm text-gray-400">
+          <p className="text-xs sm:text-sm text-gray-400">
             Última actualización:{" "}
             {new Date().toLocaleString("es-NI", {
               hour: "2-digit",
@@ -84,21 +92,20 @@ export default function StatusPage() {
             })}
           </p>
 
-          {/* 🔥 Resumen global con badges */}
           {!loading && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex justify-center gap-4 mt-6"
+              transition={{ duration: 0.3 }}
+              className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6"
             >
-              <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-sm font-semibold">
+              <span className="px-3 py-1 rounded-full bg-red-500/20 text-red-400 text-xs sm:text-sm font-semibold backdrop-blur-sm">
                 {services.filter((s) => s.status === "down").length} caídos
               </span>
-              <span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-sm font-semibold">
+              <span className="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400 text-xs sm:text-sm font-semibold backdrop-blur-sm">
                 {services.filter((s) => s.maintenance?.active).length} en mantenimiento
               </span>
-              <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-semibold">
+              <span className="px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-xs sm:text-sm font-semibold backdrop-blur-sm">
                 {services.filter((s) => s.status === "ok").length} operativos
               </span>
             </motion.div>
@@ -113,27 +120,46 @@ export default function StatusPage() {
               key={category}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
             >
-              <h2 className="text-xl font-semibold text-gray-300 mb-4 uppercase tracking-wide">
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-300 mb-4 uppercase tracking-wide">
                 {category}
               </h2>
 
-              {/* Contenedor animado con stagger */}
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 animate="show"
-                className="grid gap-6 grid-cols-1 sm:grid-cols-2"
+                className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2"
               >
                 {items.map((s) => (
-                  <motion.div key={s.name} variants={itemVariants}>
-                    <ServiceCard
+                  <motion.div
+                    key={s.name}
+                    variants={itemVariants}
+                    className={s.status === "down" ? "animate-pulse-slow" : ""}
+                  >
+                    <MemoServiceCard
                       name={s.name}
                       status={s.status}
                       maintenance={s.maintenance}
                       uptime={s.uptime}
                     />
+
+                    {/* Barra de uptime */}
+                    <div className="mt-2">
+                      <div className="h-2 w-full bg-gray-800 rounded-full overflow-hidden">
+                        <div
+                          className={`h-full transition-all duration-300 ${
+                            s.uptime === 100
+                              ? "bg-green-400"
+                              : s.uptime === 0
+                              ? "bg-red-400"
+                              : "bg-yellow-400"
+                          }`}
+                          style={{ width: `${s.uptime ?? 0}%` }}
+                        />
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </motion.div>

@@ -33,7 +33,17 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${varela.variable} bg-gray-950 text-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} ${varela.variable} text-gray-100`}
+        style={{
+          background: `
+            radial-gradient(1200px 600px at 15% 0%, rgba(16,185,129,.35), transparent 55%),
+            radial-gradient(900px 540px at 90% 15%, rgba(45,212,191,.30), transparent 56%),
+            radial-gradient(800px 500px at 0% 85%, rgba(99,102,241,.28), transparent 60%),
+            radial-gradient(700px 400px at 50% 100%, rgba(139,92,246,.25), transparent 65%),
+            linear-gradient(165deg, #0f172a, #020617 42%, #000000)
+          `,
+          backdropFilter: "blur(14px)",
+        }}
       >
         <Navbar />
         <main className="pt-20">{children}</main>

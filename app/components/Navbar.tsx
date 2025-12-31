@@ -13,8 +13,12 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-gray-900 via-gray-950 to-black shadow-[0_4px_20px_rgba(0,0,0,0.6)] fixed top-0 w-full z-50">
-      <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+    <nav className="fixed top-0 w-full z-50">
+      {/* Fondo con blur translúcido */}
+      <div className="absolute inset-0 backdrop-blur-md bg-black/30 border-b border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.6)]" />
+
+      {/* Contenido del navbar */}
+      <div className="relative max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span
@@ -28,13 +32,13 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6">
           <Link
             href="/status"
-            className={`${varela.className} px-4 py-2 rounded-lg bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 hover:text-white hover:bg-emerald-500/20 hover:border-emerald-400 transition-all font-medium shadow-sm`}
+            className={`${varela.className} px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 hover:text-white hover:bg-emerald-500/20 hover:border-emerald-400 transition-all font-medium shadow-sm`}
           >
             Estado
           </Link>
           <Link
             href="/maintenance"
-            className={`${varela.className} px-4 py-2 rounded-lg bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 hover:text-white hover:bg-amber-500/20 hover:border-amber-400 transition-all font-medium shadow-sm`}
+            className={`${varela.className} px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 hover:text-white hover:bg-amber-500/20 hover:border-amber-400 transition-all font-medium shadow-sm`}
           >
             Mantenimientos
           </Link>
@@ -66,14 +70,14 @@ export default function Navbar() {
         <div className="px-6 py-6 space-y-6">
           <Link
             href="/status"
-            className={`${varela.className} block px-4 py-2 rounded-lg bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 hover:text-white hover:bg-emerald-500/20 hover:border-emerald-400 transition-all font-medium shadow-sm`}
+            className={`${varela.className} block px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 hover:text-white hover:bg-emerald-500/20 hover:border-emerald-400 transition-all font-medium shadow-sm`}
             onClick={() => setOpen(false)}
           >
             Estado
           </Link>
           <Link
             href="/maintenance"
-            className={`${varela.className} block px-4 py-2 rounded-lg bg-white/5 backdrop-blur-md border border-white/10 text-gray-300 hover:text-white hover:bg-amber-500/20 hover:border-amber-400 transition-all font-medium shadow-sm`}
+            className={`${varela.className} block px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 text-gray-300 hover:text-white hover:bg-amber-500/20 hover:border-amber-400 transition-all font-medium shadow-sm`}
             onClick={() => setOpen(false)}
           >
             Mantenimientos

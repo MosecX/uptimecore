@@ -55,8 +55,8 @@ export default function MaintenancePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-black text-gray-100 px-6 py-10">
-      <div className="max-w-5xl mx-auto space-y-10">
+    <div className="relative min-h-screen text-gray-100 px-6 py-10 font-sans overflow-hidden">
+      <div className="max-w-5xl mx-auto space-y-10 backdrop-blur-xl bg-white/5 rounded-2xl p-8 shadow-xl border border-white/10">
         <header className="text-center space-y-4">
           <h1
             className={`${varela.className} text-5xl font-bold tracking-tight bg-gradient-to-r from-yellow-400 to-amber-300 bg-clip-text text-transparent`}
@@ -81,7 +81,7 @@ export default function MaintenancePage() {
               transition={{ duration: 0.5 }}
               className="flex justify-center mt-6"
             >
-              <span className="px-4 py-2 rounded-full bg-yellow-500/20 text-yellow-400 text-sm font-semibold">
+              <span className="px-4 py-2 rounded-full bg-yellow-500/20 text-yellow-400 text-sm font-semibold backdrop-blur-sm">
                 {maintenances.length} mantenimiento(s) activo(s)
               </span>
             </motion.div>
