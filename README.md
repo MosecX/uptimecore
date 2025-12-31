@@ -39,6 +39,10 @@ Incluye **formulario de contacto integrado con envío de correos vía Gmail SMTP
 
 ---
 
+## 🖼️ Captura de pantalla ![Preview](./public/preview.png)
+
+---
+
 ## 🚀 Instalación
 
 ```bash
