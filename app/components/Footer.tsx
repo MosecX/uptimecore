@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Varela_Round } from "next/font/google";
-import { FaGithub } from "react-icons/fa"; // 👈 Ícono GitHub
+import { FaGithub } from "react-icons/fa";
 
 const varela = Varela_Round({
   subsets: ["latin"],
