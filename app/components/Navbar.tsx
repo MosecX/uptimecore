@@ -46,11 +46,13 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-gray-300 hover:text-white transition-colors"
-        >
-          {open ? <XMarkIcon className="h-7 w-7" /> : <Bars3Icon className="h-7 w-7" />}
-        </button>
+  aria-label={open ? "Cerrar menú de navegación" : "Abrir menú de navegación"}
+  onClick={() => setOpen(!open)}
+  className="md:hidden text-gray-300 hover:text-white transition-colors"
+>
+  {open ? <XMarkIcon className="h-7 w-7" /> : <Bars3Icon className="h-7 w-7" />}
+</button>
+
       </div>
 
       {/* Overlay */}

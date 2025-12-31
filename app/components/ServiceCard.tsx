@@ -13,13 +13,18 @@ const varela = Varela_Round({
 });
 
 type Props = {
-  name: string;
-  status: "ok" | "down";
+  name?: string; // lo hacemos opcional para evitar undefined
+  status?: "ok" | "down"; // también opcional, con fallback
   maintenance?: { active: boolean; description?: string };
   uptime?: number;
 };
 
-export default function ServiceCard({ name, status, maintenance, uptime }: Props) {
+export default function ServiceCard({
+  name,
+  status = "ok", // fallback por defecto
+  maintenance,
+  uptime,
+}: Props) {
   const isMaintenance = maintenance?.active;
 
   const config = {
@@ -40,7 +45,10 @@ export default function ServiceCard({ name, status, maintenance, uptime }: Props
     },
   };
 
-  const { bg, icon, label } = isMaintenance ? config.maintenance : config[status];
+  // fallback defensivo si status no existe en config
+  const { bg, icon, label } = isMaintenance
+    ? config.maintenance
+    : config[status] ?? config.ok;
 
   return (
     <motion.div
@@ -52,13 +60,15 @@ export default function ServiceCard({ name, status, maintenance, uptime }: Props
       <div className="flex items-center gap-2">
         <div className="shrink-0">{icon}</div>
         <h3 className={`${varela.className} text-base font-semibold tracking-tight`}>
-          {name}
+          {typeof name === "string" && name.trim() !== "" ? name : "Servicio sin nombre"}
         </h3>
       </div>
 
-      <div className="mt-1 text-sm font-medium opacity-90">{label}</div>
+      <div className="mt-1 text-sm font-medium opacity-90">
+        {typeof label === "string" ? label : "Estado desconocido"}
+      </div>
 
-      {isMaintenance && maintenance?.description && (
+      {isMaintenance && typeof maintenance?.description === "string" && (
         <p className="mt-1 text-xs text-gray-200 opacity-80 italic">
           {maintenance.description}
         </p>
