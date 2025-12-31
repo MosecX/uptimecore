@@ -6,14 +6,14 @@ import { motion, Variants } from "framer-motion";
 // Tipos
 type Maintenance = { active: boolean; description?: string };
 type Service = {
-  name: string;
+  name?: string;
   status: "ok" | "down";
-  category: string;
+  category?: string;
   maintenance?: Maintenance;
   uptime?: number;
 };
 
-// Variants más ligeros (sin spring)
+// Variants más ligeros
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
@@ -46,31 +46,41 @@ export default function StatusPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetch("/api/check");
-      const resStatus = await fetch("/api/status");
-      const dataStatus = await resStatus.json();
+      try {
+        const resStatus = await fetch("/api/status");
+        const dataStatus = await resStatus.json();
 
-      const resUptime = await fetch("/api/uptime");
-      const dataUptime = await resUptime.json();
+        const resUptime = await fetch("/api/uptime");
+        const dataUptime = await resUptime.json();
 
-      const merged = dataStatus.map((s: Service) => {
-        const u = dataUptime.find((x: any) => x.name === s.name);
-        return { ...s, uptime: u?.uptime ?? 0 };
-      });
+        const merged = dataStatus.map((s: Service) => {
+          const u = dataUptime.find((x: any) => x.name === s.name);
+          return { ...s, uptime: u?.uptime ?? 0 };
+        });
 
-      setServices(merged);
-      setLoading(false);
+        setServices(merged);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error al cargar estado:", err);
+        setLoading(false);
+      }
     };
 
     fetchData();
 
-    // Auto-refresh cada 60s
-    const interval = setInterval(fetchData, 60000);
+    // Auto-refresh cada 60s con try/catch
+    const interval = setInterval(() => {
+      fetchData().catch((err) =>
+        console.error("Error en auto-refresh:", err)
+      );
+    }, 60000);
+
     return () => clearInterval(interval);
   }, []);
 
   const grouped = services.reduce((acc, s) => {
-    (acc[s.category] ||= []).push(s);
+    const cat = s.category || "Sin categoría";
+    (acc[cat] ||= []).push(s);
     return acc;
   }, {} as Record<string, Service[]>);
 
@@ -94,7 +104,7 @@ export default function StatusPage() {
 
           {!loading && (
             <motion.div
-              initial={{ opacity: 0, y: -5 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6"
@@ -113,12 +123,20 @@ export default function StatusPage() {
         </header>
 
         {loading ? (
-          <p className="text-center text-gray-400">Cargando estado de servicios...</p>
+          // Skeleton loader premium
+          <div className="space-y-4">
+            {[...Array(4)].map((_, i) => (
+              <div
+                key={i}
+                className="h-20 bg-gray-800/40 rounded-lg animate-pulse"
+              />
+            ))}
+          </div>
         ) : (
           Object.entries(grouped).map(([category, items]) => (
             <motion.section
               key={category}
-              initial={{ opacity: 0 }}
+              initial={false}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.3 }}
             >
@@ -134,12 +152,12 @@ export default function StatusPage() {
               >
                 {items.map((s) => (
                   <motion.div
-                    key={s.name}
+                    key={s.name || Math.random()}
                     variants={itemVariants}
                     className={s.status === "down" ? "animate-pulse-slow" : ""}
                   >
                     <MemoServiceCard
-                      name={s.name}
+                      name={s.name || "Servicio desconocido"}
                       status={s.status}
                       maintenance={s.maintenance}
                       uptime={s.uptime}
