@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Varela_Round } from "next/font/google";
+import { FaGithub } from "react-icons/fa";
 
 const varela = Varela_Round({
   subsets: ["latin"],
@@ -43,10 +44,20 @@ export default function Footer() {
           </Link>
         </nav>
 
-        {/* Derechos */}
-        <p className="text-xs text-gray-400 text-center md:text-right">
-          © {new Date().getFullYear()} UptimeCore · Todos los derechos reservados
-        </p>
+        {/* GitHub a la izquierda y derechos a la derecha */}
+        <div className="flex items-center justify-between w-full md:w-auto gap-4">
+          <a
+            href="https://github.com/MosecX/uptimecore"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-gray-800 hover:border-gray-500 transition-all shadow-sm"
+          >
+            <FaGithub className="text-lg" />
+          </a>
+          <p className="text-xs text-gray-400">
+            © {new Date().getFullYear()} UptimeCore · Todos los derechos reservados
+          </p>
+        </div>
       </div>
     </footer>
   );
