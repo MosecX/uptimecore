@@ -52,7 +52,6 @@ cd uptimecore
 
 # Instala dependencias
 npm install
-npm install nodemailer
 
 # Configura variables de entorno
 # Genera una App Password en tu cuenta de Google (Seguridad → Contraseñas de aplicaciones)
