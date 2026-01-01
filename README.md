@@ -12,7 +12,7 @@
   [![Nodemailer](https://img.shields.io/badge/Nodemailer-6.9-orange?logo=gmail)](https://nodemailer.com/about/)
   [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-  [🌐 Demo en vivo](https://uptimecore.vercel.app) · [🐛 Reportar issue](https://github.com/MosecX/uptimecore/issues)
+  [🌐 Demo en vivo](https://uptimecore.vercel.app) · [📖 Documentación](https://docs-uptimecore.vercel.app) · [🐛 Reportar issue](https://github.com/MosecX/uptimecore/issues)
 </div>
 
 ---
@@ -39,7 +39,9 @@ Incluye **formulario de contacto integrado con envío de correos vía Gmail SMTP
 
 ---
 
-## 🖼️ Captura de pantalla ![Preview](./public/preview.png)
+## 🖼️ Captura de pantalla
+
+![Preview](./public/preview.png)
 
 ---
 
@@ -49,26 +51,15 @@ Incluye **formulario de contacto integrado con envío de correos vía Gmail SMTP
 
 ---
 
-## 🚀 Instalación
+## 📖 Documentación
 
-```bash
-# Clona el repositorio
-git clone https://github.com/MosecX/uptimecore.git
-cd uptimecore
+Toda la información sobre instalación, configuración, uso y contribución está disponible en la página oficial de documentación:
 
-# Instala dependencias
-npm install
+👉 [docs-uptimecore.vercel.app](https://docs-uptimecore.vercel.app)
 
-# Configura variables de entorno
-# Genera una App Password en tu cuenta de Google (Seguridad → Contraseñas de aplicaciones)
-# y crea un archivo .env.local en la raíz del proyecto con lo siguiente:
+---
 
-GMAIL_USER=tu_correo@gmail.com
-GMAIL_PASS=tu_app_password
+## 📜 Licencia
 
-# Ejecuta en modo desarrollo
-npm run dev
-
-# Compila y ejecuta en producción
-npm run build
-npm run start
+Este proyecto está bajo la licencia **MIT**.  
+Consulta el archivo `LICENSE` para más detalles.
